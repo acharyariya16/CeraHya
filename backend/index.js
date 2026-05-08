@@ -8,9 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'YOUR_FUTURE_VERCEL_URL'],
-    methods: ['GET', 'POST'],
-    credentials: true
+  origin: [
+    'http://localhost:3000',
+    'https://cerahya.vercel.app'  // ← add this after you get your Vercel URL
+  ],
+  methods: ['GET', 'POST'],
+  credentials: true
 }));
 app.use(express.json());
 
